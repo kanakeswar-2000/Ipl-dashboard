@@ -1,0 +1,12 @@
+/* Write your CSS here */
+.bgl-container {
+  background-color: red;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+.recent-matches-container {
+  display: flex;
+  flex-wrap:wrap;
+}

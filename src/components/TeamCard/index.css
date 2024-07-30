@@ -1,0 +1,17 @@
+/* Write your CSS here */
+.team-container {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #1e293b;
+  color: white;
+  width: 300px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.team-image {
+  height: 60px;
+  margin-right:10px;
+}

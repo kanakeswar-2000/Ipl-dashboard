@@ -1,0 +1,12 @@
+/* Write your CSS here */
+.latest-match-container {
+  display: flex;
+  border: 2px solid white;
+  padding: 20px;
+  width: 60vw;
+}
+.banner {
+}
+.team-logo {
+  height: 50px;
+}
