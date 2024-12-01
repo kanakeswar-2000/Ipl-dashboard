@@ -1,12 +1,17 @@
 /* Write your CSS here */
 .latest-match-container {
   display: flex;
-  border: 2px solid white;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: darkolivegreen;
+  color: white;
   padding: 20px;
   width: 60vw;
 }
-.banner {
-}
+
 .team-logo {
-  height: 50px;
+  height: 100px;
+}
+.logo-container {
+  align-self: center;
 }

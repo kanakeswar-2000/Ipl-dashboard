@@ -3,12 +3,11 @@ import './index.css'
 
 const MatchCard = props => {
   const {teamDetails} = props
-  const {id, competingTeam, competingTeamLogo, result, matchStatus} =
-    teamDetails
-    const altvalue=`competing team ${competingTeam}`
+  const {competingTeam, competingTeamLogo, result, matchStatus} = teamDetails
+  const altvalue = `competing team ${competingTeam}`
   return (
-    <li className="team-container">
-      <img src={competingTeamLogo} alt=  {altvalue} className="logo" />
+    <li className="match-container">
+      <img src={competingTeamLogo} alt={altvalue} className="logo" />
       <p>{competingTeam}</p>
       <p>{result}</p>
       <p>{matchStatus}</p>

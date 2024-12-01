@@ -1,12 +1,13 @@
 /* Write your CSS here */
-.bgl-container {
-  background-color: red;
+.teammatches-bg-container {
+  background-color: rgb(60, 9, 9);
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
+  
 }
 .recent-matches-container {
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
+}
+.banner {
+  width: 80vw;
 }

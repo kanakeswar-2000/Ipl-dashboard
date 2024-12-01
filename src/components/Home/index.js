@@ -9,36 +9,35 @@ import Teamcard from '../TeamCard'
 
 class Home extends Component {
   state = {listofMatches: [], isLoading: true}
-  renderLoader = () => {
-    return (
-      <div testid="loader">
-        {' '}
-        <Loader type="Oval" color="#ffffff" height={50} width={50} />{' '}
-      </div>
-    )
-  }
+
   componentDidMount() {
     this.getTeamcardsDetails()
   }
+
   getTeamcardsDetails = async () => {
     const response = await fetch('https://apis.ccbp.in/ipl')
     const data = await response.json()
-    const teams = data.teams
-    const listofTeams = teams.map(eachteam => {
-      return {
-        name: eachteam.name,
-        id: eachteam.id,
-        teamImageUrl: eachteam.team_image_url,
-      }
-    })
+    const {teams} = data
+    const listofTeams = teams.map(eachteam => ({
+      name: eachteam.name,
+      id: eachteam.id,
+      teamImageUrl: eachteam.team_image_url,
+    }))
     this.setState({listofMatches: listofTeams, isLoading: false})
   }
+
+  renderLoader = () => (
+    <div>
+      <Loader type="Oval" color="#ffffff" height={50} width={50} />
+    </div>
+  )
+
   renderTeamcards = () => {
     const {listofMatches} = this.state
 
     return (
       <div>
-        <div className="ipl-heading">
+        <div className="ipl-heading-container">
           <img
             src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
             alt="ipl logo"
@@ -54,13 +53,11 @@ class Home extends Component {
       </div>
     )
   }
-  componentWillUnmount() {
-    this.setState({listofMatches: [], isLoading: true})
-  }
+
   render() {
     const {isLoading} = this.state
     return (
-      <div className="bg-container">
+      <div className="home-bg-container">
         {isLoading ? this.renderLoader() : this.renderTeamcards()}
       </div>
     )
