@@ -2,6 +2,7 @@
 import './index.css'
 
 import {Link} from 'react-router-dom'
+
 const Teamcard = props => {
   const {teamDetails} = props
   const {id, name, teamImageUrl} = teamDetails
